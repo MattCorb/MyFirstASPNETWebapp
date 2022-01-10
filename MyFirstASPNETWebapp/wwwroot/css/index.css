@@ -1,7 +1,5 @@
-﻿body {
-    font-family:'Trebuchet MS'
-}
-label{
-    font-size:20px;
-    color:olivedrab;
+﻿/*Background Color*/
+body {
+    background-color:cadetblue;
+    
 }
