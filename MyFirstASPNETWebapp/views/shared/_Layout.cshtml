@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/index.css" rel="stylesheet" />
+    <link rel="icon" typeof="image/x-icon" href="https://img.icons8.com/office/16/000000/globe-earth.png" />
+</head>
+
+<body>
+    <nav>
+        <a asp-controller="blah" asp-action="Index">Home</a>
+        <a asp-controller="blah" asp-action="gradeCalc">Grade Calculator</a>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>This is the footer</footer>
+    <!-- Javascript Connections -->
+    <script src="~/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="~/js/gradecalc.js"></script>
+    <link href="~/lib/bootstrap/js/bootstrap.min.js">
+
+</body>
+</html>
