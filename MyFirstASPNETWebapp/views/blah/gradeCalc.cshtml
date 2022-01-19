@@ -6,15 +6,17 @@
     ViewData["Fav"] = "Heyo";
 }
 
+@model gradeCalcModel;
 
 <h2>Grade Calculator</h2>
-<form>
+<form method="post">
     <!---Input form with javascript to prevent input over 100 and under 0--->
     <label>Assignments: </label>
     <input id="assign" 
     oninput="javascript: if (this.value > this.maxLength) this.value = this.value = 100; javascript: if (this.value < this.min) this.value = this.value = 0; "               
     type = "number"
     maxlength = "100"
+    asp-for="assign"
     min = "0"/><br />
 
     <label>Group Project:</label>
@@ -22,6 +24,7 @@
     type="number"
     oninput="javascript: if (this.value > this.maxLength) this.value = this.value = 100; javascript: if (this.value < this.min) this.value = this.value = 0; "
     maxlength="100"
+    asp-for="gp"
     min="0" /><br />
 
 
@@ -30,6 +33,7 @@
     type="number" 
     oninput="javascript: if (this.value > this.maxLength) this.value = this.value = 100; javascript: if (this.value < this.min) this.value = this.value = 0; "
     maxlength="100"
+    asp-for="qz"
     min="0" /><br />
 
     <label>Exams:        </label>
@@ -37,6 +41,7 @@
     type="number" 
     oninput="javascript: if (this.value > this.maxLength) this.value = this.value = 100; javascript: if (this.value < this.min) this.value = this.value = 0; "
     maxlength="100"
+    asp-for="ex"
     min="0" /><br />
 
     <label>Intex:        </label>
@@ -44,11 +49,12 @@
     type="number" 
     oninput="javascript: if (this.value > this.maxLength) this.value = this.value = 100; javascript: if (this.value < this.min) this.value = this.value = 0; "
     maxlength = "100"
+    asp-for="intx"
     min = "0"/><br />
     <br />
 
     <!-- Submit Button -->
-    <input type="button" value="Calculate Grade" id="gradefinal" class="btn btn-primary" />
-
+    <input type="submit" value="Calculate Grade" id="gradefinal" class="btn btn-primary" />
+    <div asp-validation-summary="All"></div>
 </form>
 

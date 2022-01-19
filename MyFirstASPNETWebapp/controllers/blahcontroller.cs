@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyFirstASPNETWebapp.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,17 @@ namespace MyFirstASPNETWebapp.controllers
     {
         public IActionResult Index()
         {
-
-
-         
             return View();
         }
 
+        [HttpGet]
         public IActionResult gradeCalc()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult gradeCalc(gradeCalcModel model)
         {
             return View();
         }
